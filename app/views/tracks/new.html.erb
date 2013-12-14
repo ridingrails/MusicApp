@@ -1,25 +1,25 @@
-<h2>Add an track</h2>
-<% bands = @bands %>
-<form name="band" action="<%= album_tracks_path %>" method="post">
-  <label for="name">track Name</label>
+<h2>Add a Track</h2>
+<% albums = @albums %>
+<form name="track" action="<%= album_tracks_path %>" method="post">
+  <label for="name">Track Name</label>
   <input type="text" id="name" name="track[name]">
 
-  <h3>Select Band</h3>
-  <select name="track[band_id]">
-  <% bands.each do |band| %>
-    <option value=<%= band.id %>
-       <%= selected if band.id == params[:band_id] %> >
-    <%= band.name %></option>
+  <h3>Select Album</h3>
+  <select name="track[album_id]">
+  <% albums.each do |album| %>
+    <option value=<%= album.id %>
+       <%= selected if album.id == params[:album_id] %> >
+    <%= album.name %></option>
   <% end %>
   </select>
   <br>
   <br>
 
-  <h3>Choose recording type</h3>
-  <label for="live">Live</label>
-  <input type="radio" id="live" value="live" name="track[recording]">
-  <label for="live">Studio</label>
-  <input type="radio" id="studio" value="studio" name="track[recording]">
+  <h3>Choose track status type</h3>
+  <label for="bonus">Bonus</label>
+  <input type="radio" id="bonus" value="bonus" name="track[status]">
+  <label for="regular">Regular</label>
+  <input type="radio" id="regular" value="regular" name="track[status]">
   <br>
   <br>
   <input type="submit" value="Add track">

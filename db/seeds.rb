@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+# ActiveRecord::Base.transaction do
+#   User.create(:email => "u@gmail.com", :password => "abc123")
+#   User.create(:email => "t@gmail.com", :password => "abc123")
+#   User.create(:email => "v@gmail.com", :password => "abc123")
+# end

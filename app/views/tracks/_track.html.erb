@@ -1,0 +1,7 @@
+<h2>Track: <%= track.name %></h2>
+<% band.albums.each do |album| %>
+<h3><%= album.name %></h3><%= link_to "Check album", album_path(album) %>
+<% end %>
+<%= link_to "See band", band_path(band) %>
+<br>
+<br>

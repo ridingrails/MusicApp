@@ -1,6 +1,6 @@
 <% band = @band %>
 <h2>Band: <%= band.name %></h2>
 <% band.albums.each do |album| %>
- <h3><%= album.name %></h3>
+ <h3><%= album.name %></h3><%= link_to "Check album", album_url(album.id) %>
 <% end %>
-<%= link_to "Add Band", new_band_url %>
+<%= link_to "Add album", new_band_album_path %>

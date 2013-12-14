@@ -23,8 +23,12 @@
   <%= link_to "Log In", new_session_url %>
 <% end %>
 <%= yield %>
-
-
+<br>
+<br>
+<%= link_to "Home", root_path %>
+<br>
+<br>
+<%= link_to "Bands", bands_path %>
 <%= debug params %>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <% album = @album %>
 <h2>Album: <%= album.name %></h2>
 <% album.tracks.each do |track| %>
- <h3><%= track.name %></h3>
+ <h3><%= track.name %></h3><%= link_to "Check track", track_path(track) %>
 <% end %>
-<%= link_to "Add Track", new_album_track_url %>
+<%= link_to "Add Track", new_album_track_path %>

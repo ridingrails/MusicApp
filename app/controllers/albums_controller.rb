@@ -1,6 +1,6 @@
 class AlbumsController < ApplicationController
   def new
-    @bands = Band.all
+    render :new
   end
 
   def index
