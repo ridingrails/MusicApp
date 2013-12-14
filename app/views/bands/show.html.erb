@@ -1,0 +1,6 @@
+<% band = @band %>
+<h2>Band: <%= band.name %></h2>
+<% band.albums.each do |album| %>
+ <h3><%= album.name %></h3>
+<% end %>
+<%= link_to "Add Band", new_band_url %>

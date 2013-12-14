@@ -1,0 +1,6 @@
+<% album = @album %>
+<h2>Album: <%= album.name %></h2>
+<% album.tracks.each do |track| %>
+ <h3><%= track.name %></h3>
+<% end %>
+<%= link_to "Add Track", new_album_track_url %>

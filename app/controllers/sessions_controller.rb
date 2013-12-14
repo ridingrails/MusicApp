@@ -10,12 +10,12 @@ class SessionsController < ApplicationController
     if user
       login_user(user)
     else
-      flash.now[:errors] = "Invalid login"
+      flash.now[:notice] = "Invalid login"
+      render :new
     end
   end
 
   def destroy
-    user = User.find(params[:id])
-    logout_user(user)
+    logout_user
   end
 end
